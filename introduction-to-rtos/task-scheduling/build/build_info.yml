@@ -1,0 +1,63 @@
+cmake:
+  application:
+    configuration-dir: '/home/fyaih/engenharia/projetos/introduction-to-rtos/task-scheduling'
+    source-dir: '/home/fyaih/engenharia/projetos/introduction-to-rtos/task-scheduling'
+  board:
+    name: 'esp32s3_devkitc'
+    path:
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/boards/espressif/esp32s3_devkitc'
+    qualifiers: 'esp32s3/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts'
+     - '/home/fyaih/engenharia/projetos/introduction-to-rtos/task-scheduling/esp32s3_devkitc_procpu.overlay'
+    include-dirs:
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/atmel/include'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/infineon/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/microchip/include'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/microchip/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/nxp/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/stm32/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/modules/hal/ti/dts'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/include'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/include/zephyr'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/common'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/vendor'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/tricore'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/rx'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/x86'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/xtensa'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/sparc'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/riscv'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/posix'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/arm64'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/arm'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts/arc'
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/fyaih/engenharia/projetos/introduction-to-rtos/task-scheduling/esp32s3_devkitc_procpu.overlay'
+  kconfig:
+    files:
+     - '/home/fyaih/engenharia/projetos/zephyrproject/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu_defconfig'
+     - '/home/fyaih/engenharia/projetos/introduction-to-rtos/task-scheduling/prj.conf'
+    user-files:
+     - '/home/fyaih/engenharia/projetos/introduction-to-rtos/task-scheduling/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/fyaih/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.5.99'
+    zephyr-base: '/home/fyaih/engenharia/projetos/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/fyaih/engenharia/projetos/zephyrproject/.venv/bin/west build -p auto -b esp32s3_devkitc/esp32s3/procpu'
+  topdir: '/home/fyaih/engenharia/projetos/zephyrproject'
+  version: '1.5.0'

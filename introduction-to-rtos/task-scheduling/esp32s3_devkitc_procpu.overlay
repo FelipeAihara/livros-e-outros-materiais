@@ -1,0 +1,27 @@
+#include <zephyr/dt-bindings/led/led.h>
+
+/ {
+    status_led: ws2812 {
+        compatible = "worldsemi,ws2812-pulse-io";
+        pulse-ios = <&rmt 0>;
+        chain-length = <1>;
+        color-mapping = <LED_COLOR_ID_GREEN
+                         LED_COLOR_ID_RED
+                         LED_COLOR_ID_BLUE>;
+        reset-delay = <300>;
+    };
+};
+
+&pinctrl {
+    rmt_status_led: rmt_status_led {
+        group1 {
+            pinmux = <RMT_OUT0_GPIO48>;
+        };
+    };
+};
+
+&rmt {
+    pinctrl-0 = <&rmt_status_led>;
+    pinctrl-names = "default";
+    status = "okay";
+};
